@@ -74,7 +74,7 @@ function claster_func(){
 
 function init() {
     console.log(db_coordinates)
-    new Structur("Статистика Чечне").loop()
+    new Structur("Статистика Чечни").loop()
     map = new ymaps.Map("map", {
           center: center,
           zoom: 8.5,
