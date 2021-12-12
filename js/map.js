@@ -42,7 +42,9 @@ function clasters(coords_arr){
   for(let obj in coords_arr) {
     myGeoObjects[obj] =  new ymaps.Placemark(coords_arr[obj]['address'],{
       hintContent:coords_arr[obj]['name']
-    },{})
+    },{
+      preset: 'islands#violetCircleDotIcon'
+    })
   }
 
 
