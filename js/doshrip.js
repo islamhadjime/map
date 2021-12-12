@@ -24,7 +24,7 @@ class Structur{
           <div class="canvas_grav">
               <canvas id="bar-chart"></canvas>
           </div>
-          <h3>Статистка</h3>
+          <h3>статистика</h3>
           <div class="text">
               <span class="id_1"></span>
               <span class="id_2"></span>
