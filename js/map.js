@@ -5,7 +5,7 @@
 let map,center = [46.003514, 43.169457];
 
 function detail_place(e,data){
-  new Structur("Статистка Больнице").loop()
+  new Structur("выздоровели Больнице").loop()
   let db = db_json
   for (let item in db) {
     for (let coords in db[item].hospitals_s) {
@@ -22,7 +22,7 @@ function detail_place(e,data){
 
 function zoom(e,object_cls){
   console.log(object_cls)
-  new Structur("Статистка по Району").loop()
+  new Structur("статистика по Району").loop()
     let coords = e.get('coords')
     map.zoomRange.get(coords).then(function(range){
       map.setCenter(
@@ -74,7 +74,7 @@ function claster_func(){
 
 function init() {
     console.log(db_coordinates)
-    new Structur("Статистка Чечне").loop()
+    new Structur("Статистика Чечне").loop()
     map = new ymaps.Map("map", {
           center: center,
           zoom: 8.5,
