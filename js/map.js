@@ -5,7 +5,7 @@
 let map,center = [46.003514, 43.169457];
 
 function detail_place(e,data){
-  new Structur("Статистка Больнице").loop()
+  new Structur("выздоровели Больнице").loop()
   let db = db_json
   for (let item in db) {
     for (let coords in db[item].hospitals_s) {
@@ -22,7 +22,7 @@ function detail_place(e,data){
 
 function zoom(e,object_cls){
   console.log(object_cls)
-  new Structur("Статистка по Району").loop()
+  new Structur("статистика по Району").loop()
     let coords = e.get('coords')
     map.zoomRange.get(coords).then(function(range){
       map.setCenter(
@@ -41,8 +41,13 @@ function clasters(coords_arr){
   });
   for(let obj in coords_arr) {
     myGeoObjects[obj] =  new ymaps.Placemark(coords_arr[obj]['address'],{
+<<<<<<< HEAD
       hintContent:coords_arr[obj]['name']}
     ,{
+=======
+      hintContent:coords_arr[obj]['name']
+    },{
+>>>>>>> 130b7f22b8ce88f08452c51d7c8504b4199d5fce
       preset: 'islands#violetCircleDotIcon'
     })
   }
@@ -74,7 +79,11 @@ function claster_func(){
 
 function init() {
     console.log(db_coordinates)
+<<<<<<< HEAD
     new Structur("Статистка летальности Чечне").loop()
+=======
+    new Structur("Статистика Чечни").loop()
+>>>>>>> 130b7f22b8ce88f08452c51d7c8504b4199d5fce
     map = new ymaps.Map("map", {
           center: center,
           zoom: 8.5,
