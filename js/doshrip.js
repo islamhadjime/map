@@ -20,18 +20,30 @@ class Structur{
   addHTML(){
     div.innerHTML = `
       <div class="inf">
+          <div class="logo">
+            <div class="logo_img">
+              <img src="./img/logo.png">
+            </div>
+            <div class="logo_title">
+              Министерство здравоохранения Чеченском Республики
+            <div>
+          </div>
           <div class="title">${this.title}</div>
           <div class="canvas_grav">
               <canvas id="bar-chart"></canvas>
+
           </div>
-          <h3>Статистка</h3>
-          <div class="text">
-              <span class="id_1"></span>
-              <span class="id_2"></span>
-              <span class="id_3"></span>
-              <span class="id_4"></span>
-              <span class="id_5"></span>
-              <span class="id_6"></span>
+          <canvas id="bars-chart"></canvas>
+          <div class="card_ned">
+            <div class="city">
+            <p>Город</p>
+            <a class="btn red"  href="">3941</a>
+
+            </div>
+            <div class="city">
+            <p>Району</p>
+            <a class="btn" href="">14</a>
+            </div>
           </div>
       </div>
       `
@@ -49,8 +61,8 @@ class Structur{
               label: "Population (millions)",
               backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
               data: [
-                  20,23
-                  ,734,784,433
+                  3400,1303
+                  ,134,784,433
                 ]
             }
           ]
@@ -59,7 +71,30 @@ class Structur{
           legend: { display: false },
           title: {
             display: true,
-            text: 'Статистка по '
+            text: 'Сравнение Районов на определенную дату '
+          }
+        }
+    })
+    new Chart(document.getElementById("bars-chart"), {
+        type: 'bar',
+        data: {
+          labels: ["Насиления", "Смертность", "Статистика Больнице", "Успешный лечения", "не выздоровели"],
+          datasets: [
+            {
+              label: "Population (millions)",
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+              data: [
+                  640,303
+                  ,434,184,233
+                ]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Сравнение Районов на определенную неделю '
           }
         }
     })

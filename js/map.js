@@ -41,8 +41,10 @@ function clasters(coords_arr){
   });
   for(let obj in coords_arr) {
     myGeoObjects[obj] =  new ymaps.Placemark(coords_arr[obj]['address'],{
-      hintContent:coords_arr[obj]['name']
-    },{})
+      hintContent:coords_arr[obj]['name']}
+    ,{
+      preset: 'islands#violetCircleDotIcon'
+    })
   }
 
 
@@ -72,7 +74,7 @@ function claster_func(){
 
 function init() {
     console.log(db_coordinates)
-    new Structur("Статистка Чечне").loop()
+    new Structur("Статистка летальности Чечне").loop()
     map = new ymaps.Map("map", {
           center: center,
           zoom: 8.5,
