@@ -33,7 +33,6 @@ class Structur{
               <canvas id="bar-chart"></canvas>
 
           </div>
-<<<<<<< HEAD
           <canvas id="bars-chart"></canvas>
           <div class="card_ned">
             <div class="city">
@@ -45,17 +44,6 @@ class Structur{
             <p>Району</p>
             <a class="btn" href="">14</a>
             </div>
-=======
-          <h3>статистика</h3>
-          <div class="text">
-              <span class="id_1"></span>
-              <span class="id_2"></span>
-              <span class="id_3"></span>
-              <span class="id_4"></span>
-              <span class="id_5"></span>
-              <span class="id_6"></span>
->>>>>>> 130b7f22b8ce88f08452c51d7c8504b4199d5fce
-          </div>
       </div>
       `
       document.body.append(div)
