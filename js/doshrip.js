@@ -50,7 +50,6 @@ class Structur{
 
   }
   dashrip(){
-    console.log(this.data)
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
